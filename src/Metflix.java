@@ -159,7 +159,24 @@ public class Metflix {
         return null;
 
     }
+    public Serie buscarSerie(String nombreABuscar){
 
+        // series = | serie1 | serie2 | serie25 | serie40 |
+        //vamos a usar el foreach: que sirve para recorrer listas
+        //este ciclo, tiene una variable, qeu apunta en cada vuelta
+        //a cada elemento de la lista
+        //o sea la primer vez, va a apuntar a serie1, despues a serie2 ddesp
+        //serie25 hasta que termina.
+        for (Serie serie : this.series) {
+            //pregunto si el nombre de la serie actual
+            //que estoy recorriendo es la que necesito
+            if (serie.nombre.equals(nombreABuscar))
+                return serie; //devuelvo esta serie.
+        }
+        //si llego hasta aca, es porque no encontro la serie.
+        return null;
+
+    }
 
 
     //buscar un director
